@@ -37,8 +37,7 @@
               "includePaths": ["src/styles"]
             },
             "allowedCommonJsDependencies": ["jspdf", "raf", "core-js", "dompurify", "html2canvas", "rgbcolor"],
-            "scripts": [],
-            "assets": ["src/assets"],
+            "scripts": []
           },
           "configurations": {
             "production": {
