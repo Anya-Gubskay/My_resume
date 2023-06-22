@@ -1,0 +1,5 @@
+<div class="container-card">
+	<div class="card-item title" *ngIf="card.title">{{ card.title }}</div>
+	<div class="card-item title-data">{{ card.titleData }}</div>
+	<div class="card-item title-description" [innerHTML]="card.description"></div>
+</div>

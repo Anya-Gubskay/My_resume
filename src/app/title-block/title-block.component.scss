@@ -1,0 +1,19 @@
+@import 'mixins/common.mixin';
+
+:host {
+	.title-block {
+		@include flex-centered;
+		background: var(--primary);
+		border-radius: var(--margin-xs);
+		font-family: Playfaire;
+		letter-spacing: 0.3rem;
+		margin-bottom: var(--margin-l);
+		padding: var(--padding-xs);
+		text-transform: uppercase;
+
+
+		span {
+			margin: 0 var(--margin-s);
+		}
+	}
+}

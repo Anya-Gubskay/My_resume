@@ -1,0 +1,13 @@
+@import 'mixins/common.mixin';
+
+:host{
+	.print-btn {
+    @include icon-size(2rem);
+    @include position(absolute, 1rem, 1rem, null, null);
+		transition: color var(--transition);
+
+		&:hover {
+			color: var(--hover-link);
+		}
+	}
+}

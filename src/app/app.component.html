@@ -1,0 +1,62 @@
+<div class="wrapper" #wrapper>
+	<app-export-pdf (handleDownload)="resumeService.handleDownload(wrapper, titlePdf)"></app-export-pdf>
+	<section class="wrapper-outer section-main">
+		<div class="container-photo">
+			<img [src]="resumeService.PathMyPhoto" alt="My photo" />
+		</div>
+		<div class="wrapper-inner content-title">
+			<div class="title-name grand-title">Anya Gubskaya</div>
+			<div class="title-name subtitle-content">middle angular Frontend developer</div>
+		</div>
+	</section>
+	<div class="wrapper-informations">
+		<!-- left blocks -->
+		<section class="wrapper-outer section-left">
+			<div class="wrapper-inner">
+				<div class="card">
+					<app-list-information class="card-contacts" [data]="resumeService.ListInfo"></app-list-information>
+				</div>
+			</div>
+			<div class="wrapper-inner">
+				<div class="card card-skills">
+					<app-title-block [title]="resumeService.TitleBlocks.skills"> </app-title-block>
+					<app-list-information class="list-skills" [data]="resumeService.ListSkills"></app-list-information>
+				</div>
+			</div>
+			<div class="wrapper-inner">
+				<div class="card">
+					<app-title-block [title]="resumeService.TitleBlocks.aboutMe"> </app-title-block>
+					<ng-container
+						*ngTemplateOutlet="cardInformation; context: {cards: resumeService.CardAboutMe}"
+					></ng-container>
+				</div>
+			</div>
+		</section>
+		<!-- right blocks -->
+		<section class="wrapper-outer section-right">
+			<div class="wrapper-inner">
+				<div class="card card-work">
+					<app-title-block [title]="resumeService.TitleBlocks.work"> </app-title-block>
+					<ng-container
+						*ngTemplateOutlet="cardInformation; context: {cards: resumeService.CardsWork}"
+					></ng-container>
+					<app-title-block [title]="resumeService.TitleBlocks.education"> </app-title-block>
+					<ng-container
+						*ngTemplateOutlet="cardInformation; context: {cards: resumeService.CardsEducation}"
+					></ng-container>
+					<app-title-block [title]="resumeService.TitleBlocks.languages"> </app-title-block>
+					<app-list-information [data]="resumeService.ListLanguages"></app-list-information>
+					<app-title-block [title]="resumeService.TitleBlocks.interests"> </app-title-block>
+					<app-list-information
+						class="list-interests"
+						[data]="resumeService.ListInterests"
+					></app-list-information>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+<ng-template #cardInformation let-cards="cards">
+	<app-card-information *ngFor="let card of cards; trackBy: trackByFn" [card]="card"></app-card-information>
+</ng-template>

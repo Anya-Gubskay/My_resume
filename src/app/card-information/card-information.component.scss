@@ -1,0 +1,23 @@
+@import 'placeholders/card';
+
+:host {
+	.container-card {
+		@extend %card;
+	}
+
+	.card-item {
+		&.title {
+			font-size: var(--h2-font-size);
+			font-weight: bold;
+			letter-spacing: 0.1rem;
+
+			&-data {
+				font-weight: bold;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-bottom: var(--margin);
+		}
+	}
+}

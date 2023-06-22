@@ -1,0 +1,195 @@
+@import 'mixins/common.mixin';
+@import 'placeholders/card';
+
+:host {
+	--width-photo: 16rem;
+	--width-left-section: 26rem;
+  --min-width: 600px;
+  --max-width: 1000px;
+
+	@include flex-centered;
+	background: var(--bg);
+	background-size: cover;
+	min-width: var(--min-width);
+	padding: var(--padding-l);
+
+	.wrapper {
+		background: var(--white);
+		border-radius: var(--margin-xs);
+		max-width: var(--max-width);
+		padding-bottom: var(--padding-l);
+		position: relative;
+		z-index: 0;
+
+		.section-main {
+			@include flex-space-between();
+			align-items: center;
+			margin: 0 var(--margin-l);
+		}
+
+    &::after, &::before {
+			@include box(100%);
+      border-radius: var(--margin-xs);
+      content: '';
+      position: absolute;
+    }
+
+		&::after {
+			background: var(--primary);
+			bottom: 0;
+			clip-path: polygon(0 25%, 102% 100%, 0 100%);
+			shape-outside: polygon(0 25%, 102% 100%, 0 100%);
+		}
+
+		&::before {
+			background: var(--secondary);
+			clip-path: polygon(0 0, 50% 0, 0% 25%);
+			shape-outside: polygon(0 0, 50% 0, 0% 25%);
+			top: 0;
+		}
+
+	  .wrapper-informations {
+		@include flex-space-between;
+		padding: 0 var(--padding-l);
+		position: relative;
+		z-index: 1;
+	  }
+
+    .section-left {
+      margin-right: var(--margin);
+      width: var(--width-left-section);
+    }
+
+    @media (max-width: 1000px) {
+      .wrapper-informations {
+        @include flex-column;
+        @include flex-centered;
+      }
+
+      .section-left {
+        margin-right: 0;
+        width: 100%;
+      }
+
+      .section-main {
+        flex-direction: column-reverse;
+      }
+    }
+	}
+
+	.container-photo {
+		box-sizing: border-box;
+		left: calc(var(--width-left-section)/2 - var(--width-photo)/2 - var(--padding));
+		position: relative;
+		top: 2rem;
+		z-index: 2;
+
+		img {
+			@include box(var(--width-photo));
+		}
+	}
+
+  @media (max-width: 1000px) {
+    .container-photo {
+      left: 0;
+    }
+  }
+
+	.card {
+		background: var(--white);
+    border: var(--margin-xs) solid var(--third);
+		border-radius: var(--margin-xs);
+		box-sizing: border-box;
+		margin-bottom: var(--margin);
+		padding: var(--padding-s) var(--padding-s) 0;
+		width: 100%;
+
+		&-contacts {
+			::ng-deep {
+				ul {
+					padding-top: calc(var(--padding-l) + var(--padding));
+				}
+			}
+		}
+	}
+
+	.content-title {
+		position: relative;
+		text-align: center;
+		width: max-content;
+		z-index: 1;
+
+		.title-name {
+			padding: 0 var(--padding);
+			text-transform: uppercase;
+		}
+
+		.subtitle-content {
+			font-family: Inter;
+			font-size: var(--h2-font-size);
+			font-weight: 300;
+			line-height: 2.5rem;
+		}
+
+		.grand-title {
+      --left-line: -1rem;
+
+			font-family: Playfaire;
+			font-size: var(--h1-font-size);
+			letter-spacing: 0.3rem;
+			line-height: 4.1rem;
+
+      &::after {
+        background: var(--black);
+        content: '';
+        display: block;
+        height: 0.05rem;
+        left: var(--left-line);
+        position: relative;
+        width: calc(100% - var(--left-line)*2);
+      }
+		}
+	}
+
+  @media (max-width: 1400px) {
+    .content-title {
+      margin-top: 2rem;
+
+      .subtitle-content {
+        font-size: var(--p-font-size);
+        line-height: 2.0rem;
+      }
+
+      .grand-title {
+        font-size: calc(var(--p-font-size) * 2);
+        line-height: 2.5rem;
+      }
+    }
+  }
+
+	.list-interests ::ng-deep li {
+		margin-bottom: 0;
+	}
+
+	.list-skills {
+		::ng-deep ul > li::before {
+			color: var(--primary);
+			content: "★";
+			font-size: var(--h2-font-size);
+		}
+	}
+
+	@media (min-width: 1400px) {
+		.list-interests {
+			::ng-deep  {
+				.container-card {
+					@include flex-space-between;
+				}
+
+				.item-card {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,60 @@
+@import 'mixins/common.mixin';
+
+html {
+	--margin-l: 2rem;
+	--margin: 1rem;
+	--margin-s: 0.5rem;
+	--margin-xs: 0.25rem;
+	--padding-l: 2rem;
+	--padding: 1rem;
+	--padding-s: 0.5rem;
+	--padding-xs: 0.25rem;
+
+
+	--h1-font-size: 3.8rem;
+	--h2-font-size: 1.5rem;
+  --p-font-size: 1rem;
+
+  --transition: .3s;
+
+	font-size: 16px;
+}
+
+body {
+	@include box(100%);
+	font-size: 1rem;
+}
+
+body {
+	margin: 0;
+}
+
+div {
+	line-height: 1.4rem;
+}
+
+a {
+	color: var(--black);
+	text-decoration: none;
+	transition: color .3s;
+
+	&:hover {
+		color: var(--hover-link);
+	}
+
+	&:visited {
+		color: var(--visites-link);
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	html {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	html {
+		font-size: 25px;
+	}
+}

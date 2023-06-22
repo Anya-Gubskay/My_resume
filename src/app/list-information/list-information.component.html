@@ -1,0 +1,12 @@
+<ul class="container-card">
+	<li class="item-card" *ngFor="let item of data; trackBy: trackByFn">
+		<mat-icon *ngIf="item?.matIcon">{{ item.matIcon }}</mat-icon>
+		<a *ngIf="item?.href" [href]="item.href" target="_blank" class="link">
+			<div class="container-icon">
+				<fa-icon [icon]="item?.icon || DEFAULT_ICON" size="lg"></fa-icon>
+			</div>
+			<span class="icon-space">{{ item.info }}</span>
+		</a>
+		<span *ngIf="item.text" class="icon-space">{{ item.text }}</span>
+	</li>
+</ul>

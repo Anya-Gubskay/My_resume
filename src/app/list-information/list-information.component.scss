@@ -1,0 +1,37 @@
+@import 'mixins/common.mixin';
+@import 'placeholders/card';
+
+:host {
+	.container-card {
+		@extend %card;
+    padding: var(--padding);
+	}
+
+  .item-card {
+		display: flex;
+		list-style-type: none;
+
+    .link {
+      @include flex-centered();
+    }
+
+		&:not(:last-child) {
+			margin-bottom: var(--margin);
+		}
+
+		&:hover {
+			.logo {
+				background-color: var(--hover-link);
+			}
+		}
+	}
+
+	.icon-space {
+		margin: 0 var(--margin-s);
+	}
+
+  .container-icon {
+    @include box(24px);
+    @include flex-centered;
+  }
+}
