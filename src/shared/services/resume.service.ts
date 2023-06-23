@@ -82,24 +82,24 @@ export class ResumeService {
 	];
 
 	public readonly ListSkills: Resume.ItemInformation[] = [
-		{text: 'Angular 14'},
-    {text: 'RxJS'},
-		{text: 'NgRx'},
-		{text: 'Webpack'},
-    {text: 'Gulp'},
-		{text: 'Nx'},
-		{text: 'Node.js'},
-		{text: 'Git'},
-		{text: 'MF'},
-		{text: 'Highcharts'},
-    {text: 'SCSS'},
+		{text: 'Angular 14', 'hasIcon': true},
+    {text: 'RxJS', 'hasIcon': true},
+		{text: 'NgRx', 'hasIcon': true},
+		{text: 'Webpack', 'hasIcon': true},
+    {text: 'Gulp', 'hasIcon': true},
+		{text: 'Nx', 'hasIcon': true},
+		{text: 'Node.js', 'hasIcon': true},
+		{text: 'Git', 'hasIcon': true},
+		{text: 'MF', 'hasIcon': true},
+		{text: 'Highcharts', 'hasIcon': true},
+    {text: 'SCSS', 'hasIcon': true},
 	];
 
 	public readonly ListInterests: Resume.ItemInformation[] = [
-		{text: 'Music', matIcon: 'headphones'},
-		{text: 'Sport', matIcon: 'pool'},
-		{text: 'Board games', matIcon: 'casino'},
-		{text: 'Read books', matIcon: 'chrome_reader_mode'},
+		{text: 'Music', matIcon: 'headphones', 'hasIcon': true},
+		{text: 'Sport', matIcon: 'pool', 'hasIcon': true},
+		{text: 'Board games', matIcon: 'casino', 'hasIcon': true},
+		{text: 'Read books', matIcon: 'chrome_reader_mode', 'hasIcon': true},
 	];
 
 	public readonly ListLanguages: Resume.ItemInformation[] = [{text: 'Belarusian - Native'}, {text: 'English - A2'}];

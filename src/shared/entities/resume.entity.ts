@@ -14,5 +14,6 @@ export namespace Resume {
 		text?: string;
 		matIcon?: string;
 		icon?: IconProp;
+    hasIcon?: boolean;
 	}
 }

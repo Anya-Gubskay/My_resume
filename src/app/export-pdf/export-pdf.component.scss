@@ -2,17 +2,16 @@
 
 :host{
 	.print-btn {
-    @include icon-size(2rem);
-    @include position(absolute, 1rem, 2rem, null, null);
+		@include icon-size(2rem);
+		@include position(absolute, 1rem, 2rem, null, null);
 		transition: color var(--transition);
 
 		&:hover {
 			color: var(--hover-link);
 		}
 
-    @media (max-width: 1000px) {
-      @include icon-size(3rem);
-      // @include position(absolute, 3rem, 2.5rem, null, null);
-    }
+		@media (max-width: 1000px) {
+			@include icon-size(3rem);
+		}
 	}
 }

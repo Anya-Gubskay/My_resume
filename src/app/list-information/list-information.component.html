@@ -7,6 +7,6 @@
 			</div>
 			<span class="icon-space">{{ item.info }}</span>
 		</a>
-		<span *ngIf="item.text" class="icon-space">{{ item.text }}</span>
+		<span *ngIf="item.text" [ngClass]="{'icon-space': item?.hasIcon}">{{ item.text }}</span>
 	</li>
 </ul>

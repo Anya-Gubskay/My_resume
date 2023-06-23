@@ -4,16 +4,16 @@
 :host {
 	.container-card {
 		@extend %card;
-    padding: var(--padding);
 	}
 
-  .item-card {
+	.item-card {
+		align-items: center;
 		display: flex;
 		list-style-type: none;
 
-    .link {
-      @include flex-centered();
-    }
+		.link {
+			@include flex-centered();
+		}
 
 		&:not(:last-child) {
 			margin-bottom: var(--margin);
@@ -30,8 +30,8 @@
 		margin: 0 var(--margin-s);
 	}
 
-  .container-icon {
-    @include box(24px);
-    @include flex-centered;
-  }
+	.container-icon {
+		@include box(24px);
+		@include flex-centered;
+	}
 }

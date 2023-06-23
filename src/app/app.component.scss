@@ -4,18 +4,18 @@
 :host {
 	--width-photo: 16rem;
 	--width-left-section: 26rem;
-  --min-width: 1000px;
-  --max-width: 1000px;
+	--min-width: 1000px;
+	--max-width: 1000px;
 
 	@include flex-centered;
 	background: var(--bg);
 	background-size: cover;
-  min-width: var(--min-width);
+	min-width: var(--min-width);
 	padding: var(--padding-l);
 
-  @media (max-width: 1000px) {
-    padding: var(--padding);
-  }
+	@media (max-width: 1000px) {
+		padding: var(--padding);
+	}
 
 	.wrapper {
 		background: var(--white);
@@ -31,15 +31,15 @@
 			margin: 0 var(--margin-l);
 		}
 
-    &::after, &::before {
+		&::after, &::before {
 			@include box(100%);
-      border-radius: var(--margin-xs);
-      content: '';
-      position: absolute;
-    }
+			border-radius: var(--margin-xs);
+			content: '';
+			position: absolute;
+		}
 
 		&::after {
-      --polygon-after: polygon(0 25%, 102% 100%, 0 100%);
+			--polygon-after: polygon(0 25%, 102% 100%, 0 100%);
 
 			background: var(--primary);
 			bottom: 0;
@@ -48,7 +48,7 @@
 		}
 
 		&::before {
-      --polygon-before: polygon(0 0, 50% 0, 0% 25%);
+			--polygon-before: polygon(0 0, 50% 0, 0% 25%);
 
 			background: var(--secondary);
 			clip-path: var(--polygon-before);
@@ -56,52 +56,52 @@
 			top: 0;
 		}
 
-	  .wrapper-informations {
-		@include flex-space-between;
-		padding: 0 var(--padding-l);
-		position: relative;
-		z-index: 1;
-	  }
+		.wrapper-informations {
+			@include flex-space-between;
+			padding: 0 var(--padding-l);
+			position: relative;
+			z-index: 1;
+		}
 
-    .section-left {
-      margin-right: var(--margin);
-      width: var(--width-left-section);
-    }
+		.section-left {
+			margin-right: var(--margin);
+			width: var(--width-left-section);
+		}
 
-    .mobile-show {
-      display: none;
-    }
+		.mobile-show {
+			display: none;
+		}
 
-    @media (max-width: 1000px) {
-      --polygon-before-max-width: polygon(0 0, 90% 0, 0% 25%);
+		@media (max-width: 1000px) {
+			--polygon-before-max-width: polygon(0 0, 90% 0, 0% 25%);
 
-      &::before {
-        clip-path: var(--polygon-before-max-width);
-        shape-outside: var(--polygon-before-max-width);
-      }
+			&::before {
+				clip-path: var(--polygon-before-max-width);
+				shape-outside: var(--polygon-before-max-width);
+			}
 
-      .wrapper-informations {
-        @include flex-column;
-        @include flex-centered;
-      }
+			.wrapper-informations {
+				@include flex-column;
+				@include flex-centered;
+			}
 
-      .section-left {
-        margin-right: 0;
-        width: 100%;
-      }
+			.section-left {
+				margin-right: 0;
+				width: 100%;
+			}
 
-      .section-main {
-        flex-direction: column-reverse;
-      }
+			.section-main {
+				flex-direction: column-reverse;
+			}
 
-      .mobile-show {
-        display: block;
-      }
+			.mobile-show {
+				display: block;
+			}
 
-      .mobile-hide {
-        display: none;
-      }
-    }
+			.mobile-hide {
+				display: none;
+			}
+		}
 	}
 
 	.container-photo {
@@ -116,15 +116,15 @@
 		}
 	}
 
-  @media (max-width: 1000px) {
-    .container-photo {
-      left: 0;
-    }
-  }
+	@media (max-width: 1000px) {
+		.container-photo {
+			left: 0;
+		}
+	}
 
 	.card {
 		background: var(--white);
-    border: var(--margin-xs) solid var(--third);
+		border: var(--margin-xs) solid var(--third);
 		border-radius: var(--margin-xs);
 		box-sizing: border-box;
 		margin-bottom: var(--margin);
@@ -159,43 +159,39 @@
 		}
 
 		.grand-title {
-      --left-line: -1rem;
+			--left-line: -1rem;
 
 			font-family: Playfaire;
 			font-size: var(--h1-font-size);
 			letter-spacing: 0.3rem;
 			line-height: 4.1rem;
 
-      &::after {
-        background: var(--black);
-        content: '';
-        display: block;
-        height: 0.05rem;
-        left: var(--left-line);
-        position: relative;
-        width: calc(100% - var(--left-line)*2);
-      }
+			&::after {
+				background: var(--black);
+				content: '';
+				display: block;
+				height: 0.05rem;
+				left: var(--left-line);
+				position: relative;
+				width: calc(100% - var(--left-line)*2);
+			}
 		}
 	}
 
-  @media (max-width: 1400px) {
-    .content-title {
-      margin-top: 2rem;
+	@media (max-width: 1400px) {
+		.content-title {
+			margin-top: 2rem;
 
-      .subtitle-content {
-        font-size: var(--p-font-size);
-        line-height: 2.0rem;
-      }
+			.subtitle-content {
+				font-size: var(--p-font-size);
+				line-height: 2.0rem;
+			}
 
-      .grand-title {
-        font-size: calc(var(--p-font-size) * 2);
-        line-height: 2.5rem;
-      }
-    }
-  }
-
-	.list-interests ::ng-deep li {
-		margin-bottom: 0;
+			.grand-title {
+				font-size: calc(var(--p-font-size) * 2);
+				line-height: 2.5rem;
+			}
+		}
 	}
 
 	.list-skills {
@@ -214,7 +210,7 @@
 				}
 
 				.item-card {
-					margin-bottom: 0;
+					margin-bottom: 0 !important;
 				}
 			}
 		}

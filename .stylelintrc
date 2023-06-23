@@ -5,6 +5,7 @@
 		"order/properties-alphabetical-order": true,
 		"max-nesting-depth": 8,
 		"selector-max-compound-selectors": 8,
+    "indentation": "tab",
 		"selector-class-pattern": null,
 		"scss/at-extend-no-missing-placeholder": null,
 		"selector-no-qualifying-type": [

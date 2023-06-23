@@ -1,10 +1,12 @@
 @import 'mixins/common.mixin';
 
 html {
+	--margin-xl: 3rem;
 	--margin-l: 2rem;
 	--margin: 1rem;
 	--margin-s: 0.5rem;
 	--margin-xs: 0.25rem;
+	--padding-xl: 3rem;
 	--padding-l: 2rem;
 	--padding: 1rem;
 	--padding-s: 0.5rem;
@@ -13,9 +15,9 @@ html {
 
 	--h1-font-size: 3.8rem;
 	--h2-font-size: 1.5rem;
-  --p-font-size: 1rem;
+	--p-font-size: 1rem;
 
-  --transition: .3s;
+	--transition: .3s;
 
 	font-size: 16px;
 }
@@ -44,12 +46,6 @@ a {
 
 	&:visited {
 		color: var(--visites-link);
-	}
-}
-
-@media screen and (max-width: 1400px) {
-	html {
-		font-size: 18px;
 	}
 }
 
