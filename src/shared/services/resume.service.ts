@@ -102,7 +102,7 @@ export class ResumeService {
 		{text: 'Read books', matIcon: 'chrome_reader_mode'},
 	];
 
-	public readonly ListLanguages: Resume.ItemInformation[] = [{text: 'Belarus - Native'}, {text: 'English - A2'}];
+	public readonly ListLanguages: Resume.ItemInformation[] = [{text: 'Belorussian - Native'}, {text: 'English - A2'}];
 
 	public readonly CardAboutMe: Resume.Card[] = [
 		new Resume.Card(
@@ -125,14 +125,10 @@ export class ResumeService {
 
 		pdf.addImage(image, 'JPEG', 0, position, fileWidth, fileHeight, '', 'FAST');
 		while (heightLeft >= 0) {
-			console.log(fileHeight);
-			console.log(pageHeight);
 			position -= pageHeight;
 			pdf.addPage();
 			pdf.addImage(image, 'PNG', 0, position, fileWidth, fileHeight, '', 'FAST');
 			heightLeft -= pageHeight;
-			console.log(position);
-			console.log(heightLeft);
 		}
 		pdf.save(title);
 	}

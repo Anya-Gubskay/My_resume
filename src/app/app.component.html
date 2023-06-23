@@ -23,13 +23,8 @@
 					<app-list-information class="list-skills" [data]="resumeService.ListSkills"></app-list-information>
 				</div>
 			</div>
-			<div class="wrapper-inner">
-				<div class="card">
-					<app-title-block [title]="resumeService.TitleBlocks.aboutMe"> </app-title-block>
-					<ng-container
-						*ngTemplateOutlet="cardInformation; context: {cards: resumeService.CardAboutMe}"
-					></ng-container>
-				</div>
+			<div class="wrapper-inner mobile-hide">
+				<ng-container *ngTemplateOutlet="cardAboutMe"></ng-container>
 			</div>
 		</section>
 		<!-- right blocks -->
@@ -52,6 +47,9 @@
 						[data]="resumeService.ListInterests"
 					></app-list-information>
 				</div>
+				<div class="wrapper-inner mobile-show">
+					<ng-container *ngTemplateOutlet="cardAboutMe"></ng-container>
+				</div>
 			</div>
 		</section>
 	</div>
@@ -59,4 +57,11 @@
 
 <ng-template #cardInformation let-cards="cards">
 	<app-card-information *ngFor="let card of cards; trackBy: trackByFn" [card]="card"></app-card-information>
+</ng-template>
+
+<ng-template #cardAboutMe>
+	<div class="card">
+		<app-title-block [title]="resumeService.TitleBlocks.aboutMe"> </app-title-block>
+		<ng-container *ngTemplateOutlet="cardInformation; context: {cards: resumeService.CardAboutMe}"></ng-container>
+	</div>
 </ng-template>

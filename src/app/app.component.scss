@@ -4,14 +4,18 @@
 :host {
 	--width-photo: 16rem;
 	--width-left-section: 26rem;
-  --min-width: 600px;
+  --min-width: 1000px;
   --max-width: 1000px;
 
 	@include flex-centered;
 	background: var(--bg);
 	background-size: cover;
-	min-width: var(--min-width);
+  min-width: var(--min-width);
 	padding: var(--padding-l);
+
+  @media (max-width: 1000px) {
+    padding: var(--padding);
+  }
 
 	.wrapper {
 		background: var(--white);
@@ -35,16 +39,20 @@
     }
 
 		&::after {
+      --polygon-after: polygon(0 25%, 102% 100%, 0 100%);
+
 			background: var(--primary);
 			bottom: 0;
-			clip-path: polygon(0 25%, 102% 100%, 0 100%);
-			shape-outside: polygon(0 25%, 102% 100%, 0 100%);
+			clip-path: var(--polygon-after);
+			shape-outside: var(--polygon-after);
 		}
 
 		&::before {
+      --polygon-before: polygon(0 0, 50% 0, 0% 25%);
+
 			background: var(--secondary);
-			clip-path: polygon(0 0, 50% 0, 0% 25%);
-			shape-outside: polygon(0 0, 50% 0, 0% 25%);
+			clip-path: var(--polygon-before);
+			shape-outside: var(--polygon-before);
 			top: 0;
 		}
 
@@ -60,7 +68,18 @@
       width: var(--width-left-section);
     }
 
+    .mobile-show {
+      display: none;
+    }
+
     @media (max-width: 1000px) {
+      --polygon-before-max-width: polygon(0 0, 90% 0, 0% 25%);
+
+      &::before {
+        clip-path: var(--polygon-before-max-width);
+        shape-outside: var(--polygon-before-max-width);
+      }
+
       .wrapper-informations {
         @include flex-column;
         @include flex-centered;
@@ -73,6 +92,14 @@
 
       .section-main {
         flex-direction: column-reverse;
+      }
+
+      .mobile-show {
+        display: block;
+      }
+
+      .mobile-hide {
+        display: none;
       }
     }
 	}
