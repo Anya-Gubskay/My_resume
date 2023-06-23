@@ -102,7 +102,7 @@ export class ResumeService {
 		{text: 'Read books', matIcon: 'chrome_reader_mode'},
 	];
 
-	public readonly ListLanguages: Resume.ItemInformation[] = [{text: 'Belorussian - Native'}, {text: 'English - A2'}];
+	public readonly ListLanguages: Resume.ItemInformation[] = [{text: 'Belarusian - Native'}, {text: 'English - A2'}];
 
 	public readonly CardAboutMe: Resume.Card[] = [
 		new Resume.Card(
