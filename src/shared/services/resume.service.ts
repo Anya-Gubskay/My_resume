@@ -8,7 +8,7 @@ export class ResumeService {
 	public readonly CardsWork: Resume.Card[] = [
 		new Resume.Card(
 			'March 2020 — February 2023',
-			'Development of a graphic interface for data analytics projects.</br>(Angular 14, NgRx, Highcharts, Nx)',
+			'Development of data analytics projects for AMC Networks.</br>(Angular 14, NgRx, Highcharts, Nx)',
 			'DataMola'
 		),
 		new Resume.Card(
@@ -82,24 +82,25 @@ export class ResumeService {
 	];
 
 	public readonly ListSkills: Resume.ItemInformation[] = [
-		{text: 'Angular 14', 'hasIcon': true},
-    {text: 'RxJS', 'hasIcon': true},
-		{text: 'NgRx', 'hasIcon': true},
-		{text: 'Webpack', 'hasIcon': true},
-    {text: 'Gulp', 'hasIcon': true},
-		{text: 'Nx', 'hasIcon': true},
-		{text: 'Node.js', 'hasIcon': true},
-		{text: 'Git', 'hasIcon': true},
-		{text: 'MF', 'hasIcon': true},
-		{text: 'Highcharts', 'hasIcon': true},
-    {text: 'SCSS', 'hasIcon': true},
+		{text: 'Angular 14', hasIcon: true},
+		{text: 'RxJS', hasIcon: true},
+		{text: 'NgRx', hasIcon: true},
+		{text: 'SCSS', hasIcon: true},
+		{text: 'Webpack', hasIcon: true},
+		{text: 'Gulp', hasIcon: true},
+		{text: 'Nx', hasIcon: true},
+		{text: 'Node.js', hasIcon: true},
+		{text: 'Git', hasIcon: true},
+		{text: 'MF', hasIcon: true},
+		{text: 'Highcharts', hasIcon: true},
+		{text: 'Figma', hasIcon: true},
 	];
 
 	public readonly ListInterests: Resume.ItemInformation[] = [
-		{text: 'Music', matIcon: 'headphones', 'hasIcon': true},
-		{text: 'Sport', matIcon: 'pool', 'hasIcon': true},
-		{text: 'Board games', matIcon: 'casino', 'hasIcon': true},
-		{text: 'Read books', matIcon: 'chrome_reader_mode', 'hasIcon': true},
+		{text: 'Music', matIcon: 'headphones', hasIcon: true},
+		{text: 'Sport', matIcon: 'pool', hasIcon: true},
+		{text: 'Board games', matIcon: 'casino', hasIcon: true},
+		{text: 'Read books', matIcon: 'chrome_reader_mode', hasIcon: true},
 	];
 
 	public readonly ListLanguages: Resume.ItemInformation[] = [{text: 'Belarusian - Native'}, {text: 'English - A2'}];
@@ -107,7 +108,10 @@ export class ResumeService {
 	public readonly CardAboutMe: Resume.Card[] = [
 		new Resume.Card(
 			'My Birthday - 26.08.1994',
-			'I like to work in a team and create interesting feature together. I try not to stand still and always move forward in everything.'
+			`I like to work in a team and create interesting feature together.
+			I try not to stand still and always move forward in everything.
+			I would like to work remotely.
+			`
 		),
 	];
 
