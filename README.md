@@ -1,9 +1,11 @@
-# Link to my resume
+# MY RUSUME
+<h1 align="center">Hi there, I'm <a href="https://github.com/Anya-Gubskay" target="_blank">Anya</a> 
+<img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
+<h3 align="center">Angular Frontend Developer</h3>
+<a href="https://anya-gubskaya-resume.web.app" target="_blank">https://anya-gubskaya-resume.web.app</a>
 
-https://anya-gubskaya-resume.web.app
-# MyResume
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+## Description
+<div>This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.</div>
 
 ## Development server
 
