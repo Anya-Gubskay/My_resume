@@ -1,4 +1,5 @@
 import {
+	ApplicationRef,
 	ChangeDetectorRef,
 	ComponentRef,
 	Directive,
@@ -24,6 +25,7 @@ export class TooltipDirective {
 	constructor(
 		private elementRef: ElementRef,
 		private viewContainerRef: ViewContainerRef,
+		private appRef: ApplicationRef,
 		private cd: ChangeDetectorRef
 	) {}
 
@@ -69,8 +71,8 @@ export class TooltipDirective {
 					break;
 				}
 				case TooltipPosition.RIGHT: {
-					this.componentRef.instance.left = Math.round(right);
-					this.componentRef.instance.top = Math.round(top + (bottom - top) / 2);
+					this.componentRef.instance.tooltip.left = Math.round(right);
+					this.componentRef.instance.tooltip.top = Math.round(top + (bottom - top) / 2);
 					break;
 				}
 				case TooltipPosition.LEFT: {

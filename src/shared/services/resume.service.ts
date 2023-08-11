@@ -48,6 +48,7 @@ export class ResumeService {
 		education: 'education',
 		languages: 'languages',
 		interests: 'interests',
+    myProjects: 'My Projects',
 	};
 
 	public readonly ListInfo: Resume.ItemInformation[] = [
@@ -78,8 +79,14 @@ export class ResumeService {
 			icon: ['fab', 'github'],
 			info: 'https://github.com/Anya-Gubskay',
 			alt: 'GitHub',
-		},
+		}
 	];
+
+  public readonly MyProjects: Resume.ItemInformation[] = [{
+			href: 'https://smart-assistant-8c120.web.app',
+      src: './../../assets/images/logo.png',
+			alt: 'Smart Assistant',
+  }]
 
 	public readonly ListSkills: Resume.ItemInformation[] = [
 		{text: 'Angular 14', hasIcon: true},
@@ -121,9 +128,9 @@ export class ResumeService {
 		const contentCanvas = await html2canvas(event);
 		const image = contentCanvas.toDataURL('image/jpeg');
 		const pdf = new jsPDF('p', 'mm', 'A4'); // A4 size pa
-		let fileWidth = pdf.internal.pageSize.getWidth();
+		const fileWidth = pdf.internal.pageSize.getWidth();
 		const pageHeight = pdf.internal.pageSize.getHeight();
-		let fileHeight = (contentCanvas.height * fileWidth) / contentCanvas.width;
+		const fileHeight = (contentCanvas.height * fileWidth) / contentCanvas.width;
 		let heightLeft = fileHeight - pageHeight;
 		let position = 0;
 

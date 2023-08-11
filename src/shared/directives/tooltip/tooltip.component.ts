@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {Component} from '@angular/core';
 import {TooltipPosition, TooltipTheme} from 'src/shared/enums/tooltip.enum';
 import {TooltipSettings} from 'src/shared/interfaces/tooltip.interface';
 

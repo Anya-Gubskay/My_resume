@@ -9,6 +9,7 @@ export namespace Resume {
 
 	export interface ItemInformation {
 		href?: string;
+    src?: string;
 		info?: string;
 		alt?: string;
 		text?: string;

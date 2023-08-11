@@ -1,6 +1,8 @@
 @import 'mixins/common.mixin';
 
 :host{
+	position: fixed;
+
 	.tooltip {
 		background-color: var(--black);
 		border-radius: var(--margin-xs);
@@ -10,12 +12,12 @@
 		opacity: 0;
 		padding: 3px 6px;
 		position: fixed;
-    width: max-content;
+		width: max-content;
 
 		&::before {
 			content: '';
 			position: absolute;
-      @include box(0);
+			@include box(0);
 		}
 
 		&--visible {
@@ -91,5 +93,5 @@
 				top: calc(50% - 5px);
 			}
 		}
-  }
+	}
 }

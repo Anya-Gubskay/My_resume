@@ -17,6 +17,12 @@
 					<app-list-information class="card-contacts" [data]="resumeService.ListInfo"></app-list-information>
 				</div>
 			</div>
+      <div class="wrapper-inner">
+        <div class="card card-skills">
+          <app-title-block [title]="resumeService.TitleBlocks.myProjects"></app-title-block>
+          <app-list-information [data]="resumeService.MyProjects"></app-list-information>
+        </div>
+      </div>
 			<div class="wrapper-inner">
 				<div class="card card-skills">
 					<app-title-block [title]="resumeService.TitleBlocks.skills"> </app-title-block>
