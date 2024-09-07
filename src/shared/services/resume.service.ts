@@ -6,14 +6,20 @@ import {Resume} from '../entities/resume.entity';
 @Injectable()
 export class ResumeService {
 	public readonly CardsWork: Resume.Card[] = [
+    new Resume.Card(
+      'October 2023 — Now',
+      'As a <b>Software Engineer</b>, I developed an internal application for telephony and sales, ensuring its seamless functionality. I collaborated with analysts on specifications for new features and supported QA in testing. Additionally, I mentored new team members and contributed to improving team processes for greater efficiency and communication.</br><b>(Angular 18, NgRx, Nx, Kibana, Playwright)</b>',
+      'Plata card'
+    ),
 		new Resume.Card(
 			'March 2020 — February 2023',
-			'Development of data analytics projects for AMC Networks.</br>(Angular 14, NgRx, Highcharts, Nx)',
+			'Development of data analytics projects for AMC Networks.</br><b>(Angular 14, NgRx, Highcharts, Nx)</b>',
 			'DataMola'
 		),
 		new Resume.Card(
 			'December 2019 — February 2020',
-			'Software for banks and financial organizations.<br>(Angular)',
+			'Software for banks and financial organizations.<br><b>(Angular)</b>',
+
 			'SoftClub'
 		),
 	];
@@ -89,7 +95,7 @@ export class ResumeService {
   }]
 
 	public readonly ListSkills: Resume.ItemInformation[] = [
-		{text: 'Angular 14', hasIcon: true},
+		{text: 'Angular 18', hasIcon: true},
 		{text: 'RxJS', hasIcon: true},
 		{text: 'NgRx', hasIcon: true},
 		{text: 'SCSS', hasIcon: true},
@@ -97,6 +103,10 @@ export class ResumeService {
 		{text: 'Gulp', hasIcon: true},
 		{text: 'Nx', hasIcon: true},
 		{text: 'Node.js', hasIcon: true},
+    {text: 'Kibana', hasIcon: true},
+    {text: 'Playwright', hasIcon: true},
+    {text: 'Tailwind CSS', hasIcon: true},
+    {text: 'Elf', hasIcon: true},
 		{text: 'Git', hasIcon: true},
 		{text: 'MF', hasIcon: true},
 		{text: 'Highcharts', hasIcon: true},
