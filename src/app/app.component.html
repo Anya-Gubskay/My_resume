@@ -23,20 +23,26 @@
           <app-list-information [data]="resumeService.MyProjects"></app-list-information>
         </div>
       </div>
+      <div class="wrapper-inner">
+        <div class="card card-skills" *ngIf="false">
+          <app-title-block [title]="resumeService.TitleBlocks.myProjects"></app-title-block>
+          <app-list-information [data]="resumeService.MyProjects"></app-list-information>
+        </div>
+      </div>
 			<div class="wrapper-inner">
 				<div class="card card-skills">
 					<app-title-block [title]="resumeService.TitleBlocks.skills"> </app-title-block>
 					<app-list-information class="list-skills" [data]="resumeService.ListSkills"></app-list-information>
 				</div>
 			</div>
-			<div class="wrapper-inner mobile-hide">
-				<ng-container *ngTemplateOutlet="cardAboutMe"></ng-container>
-			</div>
 		</section>
 		<!-- right blocks -->
 		<section class="wrapper-outer section-right">
 			<div class="wrapper-inner">
 				<div class="card">
+          <div class="wrapper-inner mobile-hide">
+            <ng-container *ngTemplateOutlet="cardAboutMe"></ng-container>
+          </div>
 					<app-title-block [title]="resumeService.TitleBlocks.work"> </app-title-block>
 					<ng-container
 						*ngTemplateOutlet="cardInformation; context: {cards: resumeService.CardsWork}"

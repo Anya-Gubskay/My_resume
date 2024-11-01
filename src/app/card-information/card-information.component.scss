@@ -11,7 +11,7 @@
 			font-weight: bold;
 			letter-spacing: 0.1rem;
 
-			&-data {
+			&-bold {
 				font-weight: bold;
 			}
 		}
@@ -20,4 +20,12 @@
 			margin-bottom: var(--margin);
 		}
 	}
+  .responsibility-list {
+    list-style-position: outside;
+  }
+
+  li {
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+  }
 }

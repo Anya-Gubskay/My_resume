@@ -34,4 +34,9 @@
 		@include box(24px);
 		@include flex-centered;
 	}
+
+  .block-img {
+    @include flex-centered;
+    width: 100%;
+  }
 }

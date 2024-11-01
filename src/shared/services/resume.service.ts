@@ -7,43 +7,68 @@ import {Resume} from '../entities/resume.entity';
 export class ResumeService {
 	public readonly CardsWork: Resume.Card[] = [
     new Resume.Card(
-      'October 2023 — Now',
-      'As a <b>Software Engineer</b>, I developed an internal application for telephony and sales, ensuring its seamless functionality. I collaborated with analysts on specifications for new features and supported QA in testing. Additionally, I mentored new team members and contributed to improving team processes for greater efficiency and communication.</br><b>(Angular 18, NgRx, Nx, Kibana, Playwright)</b>',
-      'Plata card'
+      'Plata',
+      'October 2023 — September 2024',
+      'Plata is a high-tech financial platform that is changing the way Mexicans interact with money.',
+      'Telesales team (20 people)',
+      'Area of responsibility CRM system for the sales team',
+  ['Develop and maintain internal applications for telephony and sales',
+    'Development of common functionality for teams',
+    'Analysis of problems and search for their solutions',
+    'Collaborate with analysts to create specifications for new features',
+  'Ensure quality control through thorough testing',
+ 'Train and onboard new employees in processes and roles',
+  'Improve team efficiency and communication processes',
+    'Assistance in design development'
+  ],
+
+      '(Angular 18, NgRx, Nx, Kibana, Playwright)',
+
     ),
 		new Resume.Card(
+      'DataMola',
 			'March 2020 — February 2023',
-			'Development of data analytics projects for AMC Networks.</br><b>(Angular 14, NgRx, Highcharts, Nx)</b>',
-			'DataMola'
+      'DataMola is specialized in data warehouse technologies and helps in the implementation of business intelligence systems',
+              'Team AMC Networks (15 people)',
+      'Development of data analytics projects for AMC Networks',
+      ['Maintaining existing functionality', 'Development of new functionality', 'Team lead junior developers', 'Conducting interviews'],
+			'(Angular 14, NgRx, Highcharts, Nx)',
+
 		),
 		new Resume.Card(
+      'SoftClub',
 			'December 2019 — February 2020',
-			'Software for banks and financial organizations.<br><b>(Angular)</b>',
-
-			'SoftClub'
+			'Software for banks and financial organizations.',
+      '',
+      '',
+      [],
+      '(Angular)',
 		),
 	];
 
 	public readonly CardsEducation: Resume.Card[] = [
 		new Resume.Card(
+      'iTechArt Group',
 			'August 2019 — November 2019',
 			'Student labs. Single-page application «CargoManager».<br>(Angular)',
-			'iTechArt Group'
+
 		),
 		new Resume.Card(
+      'IT Academy',
 			'April 2019 — May 2019',
 			'Student Web application development with JavaScript course at educational center of HTP. Single-page application «BreathtakingTest».<br>(WebPack, ECMAScript 6, HTML, CSS3, Less)',
-			'IT Academy'
 		),
 		new Resume.Card(
+      'IT Academy',
 			'December 2018 — January 2019',
 			'Student of HTML, CSS, JavaScript course educational center of HTP. Cross-browser website «The secret of magic».<br>(HTML, CSS3, Less, ECMAScript 5)',
-			'IT Academy'
+
 		),
 		new Resume.Card(
+      'Belarusian National Technical University',
 			'2017',
 			'Engineer of heat and gas supply of ventilation and air basin.',
-			'Belarusian National Technical University'
+
 		),
 	];
 
@@ -61,10 +86,15 @@ export class ResumeService {
 		{
 			href: 'tel:+375292523512',
 			icon: ['fas', 'mobile-screen-button'],
-			info: '375-(29)-252-35-12',
+			info: '+375(29)-252-35-12',
 		},
+    {
+      matIcon: 'location_on',
+      text: 'Minsk, Belarus',
+      hasIcon: true,
+    },
 		{
-			href: 'mailto:anyagubskaya@gmail.ru',
+			href: 'mailto:anygubskaya@gmail.ru',
 			icon: ['fas', 'envelope'],
 			info: 'anyagubskaya@gmail.ru',
 		},
@@ -89,9 +119,9 @@ export class ResumeService {
 	];
 
   public readonly MyProjects: Resume.ItemInformation[] = [{
-			href: 'https://smart-assistant-8c120.web.app',
+			href: 'https://japanese-crosswords.web.app/',
       src: './../../assets/images/logo.png',
-			alt: 'Smart Assistant',
+			alt: 'Japanese Crosswords',
   }]
 
 	public readonly ListSkills: Resume.ItemInformation[] = [
@@ -99,7 +129,6 @@ export class ResumeService {
 		{text: 'RxJS', hasIcon: true},
 		{text: 'NgRx', hasIcon: true},
 		{text: 'SCSS', hasIcon: true},
-		{text: 'Webpack', hasIcon: true},
 		{text: 'Gulp', hasIcon: true},
 		{text: 'Nx', hasIcon: true},
 		{text: 'Node.js', hasIcon: true},
@@ -120,14 +149,14 @@ export class ResumeService {
 		{text: 'Read books', matIcon: 'chrome_reader_mode', hasIcon: true},
 	];
 
-	public readonly ListLanguages: Resume.ItemInformation[] = [{text: 'Belarusian - Native'}, {text: 'English - A2'}];
+	public readonly ListLanguages: Resume.ItemInformation[] = [{text: 'Belarusian - Native'}, {text: 'English - B1'}];
 
 	public readonly CardAboutMe: Resume.Card[] = [
 		new Resume.Card(
-			'My Birthday - 26.08.1994',
-			`I like to work in a team and create interesting feature together.
-			I try not to stand still and always move forward in everything.
-			I would like to work remotely.
+      '',
+			'',
+			`I enjoy working in a team to create innovative solutions.
+			I'm always striving for growth and improvement, never settling for the status quo.
 			`
 		),
 	];

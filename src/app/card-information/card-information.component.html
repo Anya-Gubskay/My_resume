@@ -1,5 +1,13 @@
 <div class="container-card">
 	<div class="card-item title" *ngIf="card.title">{{ card.title }}</div>
-	<div class="card-item title-data">{{ card.titleData }}</div>
-	<div class="card-item title-description" [innerHTML]="card.description"></div>
+	<div class="card-item title-bold" *ngIf="card.titleData">{{ card.titleData }}</div>
+	<div class="card-item title-description" *ngIf="card.description">{{card.description}}</div>
+  <div class="card-item title-bold" *ngIf="card.team">{{ card.team }}</div>
+  <div class="card-item" *ngIf="card.areaOfResponsibility">
+    <div class="card-item title-bold">{{ card.areaOfResponsibility }}:</div>
+    <ul class="responsibility-list" *ngIf="card.listOfResponsibilities?.length">
+      <li class="mb-2" *ngFor="let item of card.listOfResponsibilities">{{item}}</li>
+    </ul>
+  </div>
+  <div class="card-item title-bold" *ngIf="card.technologies">{{ card.technologies }}</div>
 </div>
